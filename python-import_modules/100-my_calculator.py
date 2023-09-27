@@ -13,6 +13,7 @@ if __name__ == "__main__":
 
     if operator not in ('+', '-', '*', '/'):
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
     else:
         number1 = int(argv[1])
         number2 = int(argv[3])
