@@ -12,3 +12,4 @@ def uniq_add(my_list=[]):
             sum += number
 
     return (sum)
+
