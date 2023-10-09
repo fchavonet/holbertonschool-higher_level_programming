@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+This script defines a "Square" class to represent a square.
+"""
+
+
 class Square:
     """
     This is the Square class to represent a square.
