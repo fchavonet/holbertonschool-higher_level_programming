@@ -20,7 +20,7 @@ First and Last name are valid string:
     My name is Fabien Chavonet
 
 No arguments given:
-===================
+-------------------
 
 .. code-block:: python
 
