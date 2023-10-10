@@ -32,4 +32,4 @@ def text_indentation(text):
             sentence = ""
 
     if sentence.strip() != "":
-        print(sentence.strip())
+        print("{}".format(sentence.strip()), end="")
