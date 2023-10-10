@@ -1,0 +1,129 @@
+Testing the `add_integer` function in Python
+============================================
+
+This is a doctest file for testing the `add_integer` function in Python.
+It provides examples and explanations of how to use the function.
+
+Import file
+-----------
+
+.. code-block:: python
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Adding integers
+---------------
+
+You can use the `add_integer` function to add two integers (positive or negative) together.
+
+.. code-block:: python
+
+    >>> add_integer(40, 2)
+    42
+
+    >>> add_integer(40, -2)
+    38
+
+    >>> add_integer(-40, 2)
+    -38
+
+    >>> add_integer(-40, -2)
+    -42
+
+Adding floats
+-------------
+
+You can use the `add_integer` function to add two floats (positive or negative) together, they will be convert into integer.
+
+.. code-block:: python
+
+    >>> add_integer(40.2, 2.2)
+    42
+
+    >>> add_integer(40.2, -2.2)
+    38
+
+    >>> add_integer(-40.2, 2.2)
+    -38
+
+    >>> add_integer(-40.2, -2.2)
+    -42
+
+Adding integer and floats
+-------------------------
+
+You can use the `add_integer` function to add integer and float together, the float number will be converted to integer.
+
+.. code-block:: python
+
+    >>> add_integer(2, 40.2)
+    42
+
+    >>> add_integer(40.2, -2)
+    38
+
+    >>> add_integer(-40.2, 2)
+    -38
+
+    >>> add_integer(40.2, 2)
+    42
+
+Adding a Single Integer
+------------------------
+
+If you provide only one integer to the `add_integer` function, it will assume the second integer to be 98 (default) and return the sum of integer + 98.
+
+.. code-block:: python
+
+    >>> add_integer(2)
+    100
+
+Adding nothing :)
+-----------------
+
+If you call the `add_integer` function without providing any arguments, it will raise a `TypeError` indicating that it is missing 1 required positional argument, 'a'.
+
+.. code-block:: python
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Handling Invalid Input
+----------------------
+
+If you provide non-integer values or incompatible types to the `add_integer` function, it will raise a `TypeError` with a specific message.
+
+.. code-block:: python
+
+    >>> add_integer("nan", 42)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(42, "nan")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("nan", "nan")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer("40", "2")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Edge Cases
+----------
+
+Test the function with edge cases, such as large integers and negative integers.
+
+.. code-block:: python
+
+>>> add_integer(2147483647, 1)  # Maximum positive integer
+2147483648
+
+>>> add_integer(-2147483648, 1)  # Minimum negative integer
+-2147483647
+
+>>> add_integer(0, 0)  # Adding zero
+0
