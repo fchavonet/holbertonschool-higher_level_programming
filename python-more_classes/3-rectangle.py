@@ -113,7 +113,10 @@ class Rectangle:
 
     def __str__(self):
         """
-        Prints the rectangle with the character '#' to stdout.
+        Returns a string representation of the rectangle with `#`.
+
+        Returns:
+            str: A string representing the rectangle.
         """
 
         string = ""
