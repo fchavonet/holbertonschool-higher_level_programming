@@ -23,6 +23,7 @@ class test_max_integer(unittest.TestCase):
     def test_basic_functioning(self):
         self.assertEqual(max_integer([2]), 2)
         self.assertEqual(max_integer([2, 4, 6, 8]), 8)
+        self.assertEqual(max_integer([2, 6, 4]), 6)
         self.assertEqual(max_integer([-2, -4, -6, -8]), -2)
 
     # Test case for lists with multiple maximum values.
