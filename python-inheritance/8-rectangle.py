@@ -4,7 +4,6 @@
 This module defines the `BaseGeometry` class and the `Rectangle` class.
 """
 
-# Import of the 7-base_geometry file.
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
