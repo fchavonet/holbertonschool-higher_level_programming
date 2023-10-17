@@ -34,8 +34,8 @@ class Rectangle:
             ValueError: If either width or height is less than or equal to 0.
         """
 
-        self.integer_validator("width", int)
-        self.integer_validator("height", int)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
 
         self.__width = width
         self.__height = height
