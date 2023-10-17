@@ -6,7 +6,7 @@ Method `print_sorted` to print the elements of the list in sorted order.
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     Class which is a subclass of the built-in list class.
     """
