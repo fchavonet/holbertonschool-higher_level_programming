@@ -31,6 +31,7 @@ Basic list:
     >>> my_list.print_sorted()
     [2, 4, 6, 8]
     >>> my_list.append(10)
+    >>> print(my_list)
     [8, 6, 4, 2, 10]
     >>> my_list.print_sorted()
     [2, 4, 6, 8, 10]
