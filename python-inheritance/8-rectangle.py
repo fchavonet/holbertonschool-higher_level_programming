@@ -7,7 +7,7 @@ This module defines the `BaseGeometry` class and the `Rectangle` class.
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class Rectangle(BaseException):
+class Rectangle(BaseGeometry):
     """
     Initializes a new Rectangle instance.
 
