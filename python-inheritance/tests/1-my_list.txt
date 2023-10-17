@@ -30,6 +30,11 @@ Basic list:
     [8, 6, 4, 2]
     >>> my_list.print_sorted()
     [2, 4, 6, 8]
+    >>> my_list.append(10)
+    [8, 6, 4, 2, 10]
+    >>> my_list.print_sorted()
+    [2, 4, 6, 8, 10]
+
 
 List with duplicate elements:
 -----------------------------
