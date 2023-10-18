@@ -29,7 +29,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """
         Converts a Student object to a dictionary.
 
@@ -37,5 +37,11 @@ class Student:
             dict: a dictionary representation of the
             Student object for JSON serialization.
         """
-
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        else:
+            my_dict = {}
+            for key in attrs:
+                if key in self.__dict__:
+                    my_dict[key] = self.__dict__[key]
+            return my_dict
