@@ -204,7 +204,7 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
-  
+
     def __str__(self):
         """
         Returns a string representation of the Rectangle instance.
