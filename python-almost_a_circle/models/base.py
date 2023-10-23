@@ -61,6 +61,6 @@ class Base:
                 Returns an empty list if the input is `None`.
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return []
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
