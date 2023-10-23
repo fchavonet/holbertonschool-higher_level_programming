@@ -47,7 +47,6 @@ class Rectangle(Base):
         y(self, value):
             Setter method to set the y-coordinate of the rectangle.
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes a new Rectangle instance.
@@ -60,7 +59,6 @@ class Rectangle(Base):
             id (int, optional): the unique identifier of
                                 the rectangle (default is None).
         """
-
         self.width = width
         self.height = height
         self.x = x
@@ -75,7 +73,6 @@ class Rectangle(Base):
         Returns:
             int: the width of the rectangle.
         """
-
         return self.__width
 
     @width.setter
@@ -86,6 +83,11 @@ class Rectangle(Base):
         Args:
             value (int): the width of the rectangle.
         """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+
+        if value < 0:
+            raise ValueError("width must be > 0")
 
         self.__width = value
 
@@ -97,7 +99,6 @@ class Rectangle(Base):
         Returns:
             int: the height of the rectangle.
         """
-
         return self.__height
 
     @height.setter
@@ -108,6 +109,11 @@ class Rectangle(Base):
         Returns:
             int: the x-coordinate of the rectangle.
         """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+
+        if value < 0:
+            raise ValueError("height must be > 0")
 
         self.__height = value
 
@@ -119,7 +125,6 @@ class Rectangle(Base):
         Returns:
             int: the x-coordinate of the rectangle.
         """
-
         return self.__x
 
     @x.setter
@@ -130,6 +135,11 @@ class Rectangle(Base):
         Args:
             value (int): the x-coordinate of the rectangle.
         """
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+
+        if value < 0:
+            raise ValueError("x must be >= 0")
 
         self.__x = value
 
@@ -141,7 +151,6 @@ class Rectangle(Base):
         Returns:
             int: the y-coordinate of the rectangle.
         """
-
         return self.__y
 
     @y.setter
@@ -152,5 +161,10 @@ class Rectangle(Base):
         Args:
             value (int): the y-coordinate of the rectangle.
         """
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+
+        if value < 0:
+            raise ValueError("y must be >= 0")
 
         self.__y = value
