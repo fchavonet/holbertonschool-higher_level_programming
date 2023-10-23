@@ -15,9 +15,9 @@ class Rectangle(Base):
         width (int): the width of the rectangle.
         height (int): the height of the rectangle.
         x (int): the x-coordinate of the rectangle (default is 0).
-            y (int): the y-coordinate of the rectangle (default is 0).
+        y (int): the y-coordinate of the rectangle (default is 0).
         id (int, optional): the unique identifier of
-                                the rectangle (default is None).
+                            the rectangle (default is None).
 
     Methods:
         __init__(self, width, height, x=0, y=0, id=None):
@@ -70,7 +70,7 @@ class Rectangle(Base):
         """
         Getter method to retrieve the width of the rectangle.
 
-        Returns:
+        Return:
             int: the width of the rectangle.
         """
         return self.__width
@@ -100,7 +100,7 @@ class Rectangle(Base):
         """
         Getter method to retrieve the height of the rectangle.
 
-        Returns:
+        Return:
             int: the height of the rectangle.
         """
         return self.__height
@@ -130,7 +130,7 @@ class Rectangle(Base):
         """
         Getter method to retrieve the x-coordinate of the rectangle.
 
-        Returns:
+        Return:
             int: the x-coordinate of the rectangle.
         """
         return self.__x
@@ -160,7 +160,7 @@ class Rectangle(Base):
         """
         Getter method to retrieve the y-coordinate of the rectangle.
 
-        Returns:
+        Return:
             int: the y-coordinate of the rectangle.
         """
         return self.__y
@@ -189,7 +189,7 @@ class Rectangle(Base):
         """
         Calculate the area of the rectangle.
 
-        Returns:
+        Return:
             int: the area of the rectangle.
         """
         return self.__width * self.__height
@@ -207,9 +207,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """
-        Returns a string representation of the Rectangle instance.
+        Return a string representation of the Rectangle instance.
 
-        Returns:
+        Return:
             str: a string representing the Rectangle instance in the format
             "([Rectangle] ({}) {}/{} - {}/{}"
              .format(self.id, self.x, self.y, self.width, self.height)).
