@@ -222,8 +222,22 @@ class Rectangle(Base):
         Assigns an argument to each attribute.
 
         Args:
-            *args: a variable number of arguments
-            in the order (id, width, height, x, y).
+            *args: a variable number of arguments.
+            The order is important:
+                1st argument should be the `id` attribute
+                2nd argument should be the `width` attribute
+                3rd argument should be the `height` attribute
+                4th argument should be the `x` attribute
+                5th argument should be the `y` attribute
         """
         if args:
-            self.id, self.width, self.height, self.x, self.y = args[:5]
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
