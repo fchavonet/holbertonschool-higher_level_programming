@@ -82,6 +82,10 @@ class Rectangle(Base):
 
         Args:
             value (int): the width of the rectangle.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is not greater than 0.
         """
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -104,10 +108,14 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """
-        Getter method to retrieve the x-coordinate of the rectangle.
+        Setter method to set the height of the rectangle.
 
-        Returns:
-            int: the x-coordinate of the rectangle.
+        Args:
+            value (int): The height of the rectangle.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is not greater than 0.
         """
         if type(value) is not int:
             raise TypeError("height must be an integer")
@@ -134,6 +142,10 @@ class Rectangle(Base):
 
         Args:
             value (int): the x-coordinate of the rectangle.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
         """
         if type(value) is not int:
             raise TypeError("x must be an integer")
@@ -160,6 +172,10 @@ class Rectangle(Base):
 
         Args:
             value (int): the y-coordinate of the rectangle.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
         """
         if type(value) is not int:
             raise TypeError("y must be an integer")
