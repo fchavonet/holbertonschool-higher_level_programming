@@ -144,7 +144,7 @@ class Rectangle(Base):
 
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         """
         Setter method to set the y-coordinate of the rectangle.
