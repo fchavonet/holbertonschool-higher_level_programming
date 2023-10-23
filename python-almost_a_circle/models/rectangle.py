@@ -198,12 +198,13 @@ class Rectangle(Base):
         """
         Prints in `stdout` the Rectangle instance with the character `#`.
         """
+        print("\n" * self.y, end="")
         for i in range(self.__height):
-            print(" " * (self.x - 1), end=" ")
+            print(" " * self.x, end="")
             for j in range(self.__width):
                 print("#", end="")
             print()
-
+  
     def __str__(self):
         """
         Returns a string representation of the Rectangle instance.
