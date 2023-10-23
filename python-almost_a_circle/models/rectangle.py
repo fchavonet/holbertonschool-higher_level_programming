@@ -217,18 +217,20 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Assigns an argument to each attribute.
 
         Args:
             *args: a variable number of arguments.
-            The order is important:
-                1st argument should be the `id` attribute
-                2nd argument should be the `width` attribute
-                3rd argument should be the `height` attribute
-                4th argument should be the `x` attribute
-                5th argument should be the `y` attribute
+                The order is important:
+                    1st argument should be the `id` attribute
+                    2nd argument should be the `width` attribute
+                    3rd argument should be the `height` attribute
+                    4th argument should be the `x` attribute
+                    5th argument should be the `y` attribute
+            **kwargs: a variable number of keyword arguments.
+                These allow you to update attributes by name.
         """
         if args:
             if len(args) >= 1:
@@ -241,3 +243,14 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
