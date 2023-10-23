@@ -5,6 +5,8 @@ Module that defines a base class named `Base` that manages
 unique identifiers for its instances.
 """
 
+import json
+
 
 class Base:
     """
@@ -43,3 +45,21 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """
+        Convert a list of dictionaries to a JSON-formatted string.
+
+        Args:
+            list_dictionaries (list of dict): a list of dictionaries
+                                              to be converted
+                                              to a JSON string.
+
+        Returns:
+            str: A JSON-formatted string representing the list of dictionaries.
+                Returns an empty list if the input is `None`.
+        """
+        if list_dictionaries is None:
+            return []
+        else:
+            return (json.dumps(list_dictionaries))
