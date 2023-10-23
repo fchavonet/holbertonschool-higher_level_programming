@@ -7,7 +7,7 @@ This module defines the `Base` class and the `Rectangle` class.
 from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """
     This is the Rectangle class to represent a rectangle.
 
