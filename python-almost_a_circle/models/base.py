@@ -6,6 +6,7 @@ unique identifiers for its instances.
 """
 
 import json
+import turtle
 
 
 class Base:
@@ -153,3 +154,51 @@ class Base:
 
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Draw rectangles and squares using the Turtle graphics module.
+
+        Args:
+            list_rectangles (list of Rectangle objects): a list of Rectangle
+                                                         instances to draw.
+            list_squares (list of Square objects): a list of Square
+                                                   instances to draw.
+
+        Disclaimer : done with ChatGPT to learn,
+                     not a mandatory task (advanced).
+        """
+        # Create a Turtle screen
+        screen = turtle.Screen()
+
+        # Create a Turtle object for drawing
+        t = turtle.Turtle()
+
+        # Set the speed of the drawing (you can adjust this)
+        t.speed(1)
+
+        # Draw rectangles from the list
+        for rect in list_rectangles:
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            t.forward(rect.width)
+            t.left(90)
+            t.forward(rect.height)
+            t.left(90)
+            t.forward(rect.width)
+            t.left(90)
+            t.forward(rect.height)
+
+        # Draw squares from the list
+        for square in list_squares:
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(square.size)
+                t.left(90)
+
+        # Close the drawing window when clicked
+        screen.exitonclick()
