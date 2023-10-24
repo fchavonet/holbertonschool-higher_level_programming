@@ -88,4 +88,4 @@ class Base:
         filename = cls.__name__ + ".json"
 
         with open(filename, "w", encoding="utf-8") as file:
-            return (file.write(json_string))
+            file.write(json_string)
