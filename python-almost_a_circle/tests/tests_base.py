@@ -22,6 +22,7 @@ class test_Base_methods(unittest.TestCase):
         Test if `id` of Base is assigned when `__nb_objects` is 0.
         """
         Base.__nb_objects = 0
+
         base = Base()
         self.assertIsNotNone(base.id, 1)
 
@@ -30,6 +31,7 @@ class test_Base_methods(unittest.TestCase):
         Test if instance created with `Base` constructor is a `Base` instance.
         """
         Base.__nb_objects = 0
+
         base = Base()
         self.assertIsInstance(base, Base)
 
@@ -38,6 +40,7 @@ class test_Base_methods(unittest.TestCase):
         Test if `id` is correctly assigned when a specific `id` is provided.
         """
         Base.__nb_objects = 0
+
         base = Base(42)
         self.assertEqual(base.id, 42)
 
@@ -46,6 +49,7 @@ class test_Base_methods(unittest.TestCase):
         Test if `id` is assigned when no `id` is provided.
         """
         Base.__nb_objects = 0
+
         base = Base()
         self.assertIsNotNone(id(base))
 
@@ -55,6 +59,7 @@ class test_Base_methods(unittest.TestCase):
         a list of dictionaries to JSON.
         """
         Base.__nb_objects = 0
+
         rectangle = Rectangle(20, 10, 4, 2)
         square = Square(20, 10, 4, 2)
         dictionary = [rectangle.to_dictionary(), square.to_dictionary()]
@@ -67,6 +72,7 @@ class test_Base_methods(unittest.TestCase):
         Test if save_to_file correctly saves a list of objects to a JSON file.
         """
         Base.__nb_objects = 0
+
         rectangle = Rectangle(20, 10, 4, 2)
         square = Square(20, 10, 4, 2)
         dictionary = [rectangle.to_dictionary(), square.to_dictionary()]
@@ -81,6 +87,7 @@ class test_Base_methods(unittest.TestCase):
         a JSON string to a list of dictionaries.
         """
         Base.__nb_objects = 0
+
         list_input = [{"id": 42, "width": 20, "height": 10}]
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
@@ -92,6 +99,7 @@ class test_Base_methods(unittest.TestCase):
         from a dictionary of attributes.
         """
         Base.__nb_objects = 0
+
         rectangle = Rectangle(2, 4, 6, 8)
         list_rectangles_inout = rectangle.to_dictionary()
         new_rectangle = Rectangle.create(**list_rectangles_inout)
