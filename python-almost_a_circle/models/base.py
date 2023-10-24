@@ -81,11 +81,11 @@ class Base:
         new_dictionary = []
 
         for object in list_objs:
-            new_dictionary.append(object.to_dictionary)
+            new_dictionary.append(object.to_dictionary())
 
         json_string = cls.to_json_string(new_dictionary)
 
         filename = cls.__name__ + ".json"
 
         with open(filename, "w", encoding="utf-8") as file:
-            file.write(json_string)
+            return (file.write(json_string))
