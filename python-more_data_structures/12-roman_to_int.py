@@ -30,12 +30,12 @@ def roman_to_int(roman_string):
     roman_int = 0
     prev_roman = 0
 
-    for roman_char in roman_string[::-1]:
+    for roman_char in roman_string:
 
         current_roman = roman_dictionary.get(roman_char, 0)
 
-        if current_roman < prev_roman:
-            roman_int -= current_roman
+        if current_roman > prev_roman:
+            roman_int += current_roman - 2 * prev_roman
         else:
             roman_int += current_roman
 
