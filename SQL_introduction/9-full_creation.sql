@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS second_table (
     name VARCHAR(256),
     score INT
 );
-
+mysql -u root -p my_database < /chemin/vers/le/dump.sql
 INSERT INTO second_table (id, name, score) VALUE
 (1, "John", 10),
 (2, "Alex", 3),
