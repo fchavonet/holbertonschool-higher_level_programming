@@ -20,9 +20,10 @@ if __name__ == "__main__":
 
     cursor = database.cursor()
 
-    cursor.execute("""SELECT * FROM states
-                      WHERE name LIKE BINARY %s
-                      ORDER BY states.id
+    cursor.execute("""
+                   SELECT * FROM states
+                   WHERE name LIKE BINARY %s
+                   ORDER BY states.id
                    """, (sys.argv[4],))
 
     for row in cursor.fetchall():
