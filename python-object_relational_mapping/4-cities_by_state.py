@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that list all cities from the database `hbtn_0e_4_usa`.
+Module that list all cities from a database.
 """
 
 import MySQLdb
