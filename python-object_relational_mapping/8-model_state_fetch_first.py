@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Modul that prints the first State object from the database `hbtn_0e_6_usa`.
+Module that prints the first State object from the database `hbtn_0e_6_usa`.
 """
 
 from sqlalchemy import create_engine
