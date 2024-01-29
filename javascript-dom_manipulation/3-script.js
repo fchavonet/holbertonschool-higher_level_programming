@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('header');
+  const toggleHeader = document.querySelector('#toggle_header');
 
-  header.addEventListener('click', function () {
+  toggleHeader.addEventListener('click', function () {
+    const header = document.querySelector('header');
     header.classList.toggle('red');
     header.classList.toggle('green');
   });
